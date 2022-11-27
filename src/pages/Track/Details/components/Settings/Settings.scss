@@ -1,0 +1,87 @@
+@import "../../../../Generate.scss";
+
+.settings {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  margin-bottom: 5rem;
+  .save {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    button {
+      background-color: rgba(57, 63, 84, 0.8);
+      color: $input-text-active;
+      font-size: 2rem;
+      width: 80px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 2px solid black;
+      box-shadow: 2px 2px 7px 12px rgba(0, 0, 0, 0.149);
+      cursor: pointer;
+      transition: all 120ms ease-in-out;
+      &:hover {
+        color: #c8d6f9;
+        background-color: rgba(63, 69, 90, 0.8);
+      }
+    }
+  }
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: wrap;
+
+    .option {
+      flex: 1;
+      min-width: 33.333vw;
+      max-width: 33.333vw;
+      padding: 20px;
+      border: 2px solid black;
+      padding-left: 30px;
+      align-self: stretch;
+      text-align: left;
+      box-shadow: 2px 2px 7px 12px rgba(0, 0, 0, 0.149);
+      .subheading {
+        display: flex;
+        position: relative;
+        height: 30px;
+        font-weight: 500;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+
+        .switchi {
+          overflow: hidden;
+          position: absolute;
+          transform: scale(0.2);
+          right: -10%;
+          top: -170%;
+        }
+      }
+      .label {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+      }
+      .webflow-style-input {
+        margin: 0;
+        padding: 10px;
+        position: relative;
+        &.disabled {
+          opacity: 0.5;
+        }
+        .inputDateTime {
+          // opacity: 0;
+          cursor: pointer;
+        }
+        ::-webkit-calendar-picker-indicator {
+          background-image: url("./calendar.svg");
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

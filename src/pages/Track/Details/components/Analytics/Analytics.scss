@@ -1,0 +1,25 @@
+@import "../../../../Generate.scss";
+
+.analytics {
+  .heading {
+    margin-bottom: 2rem;
+  }
+  .options {
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 30vh;
+    color: white !important;
+    font-size: 2rem;
+    .option {
+      margin-bottom: 2rem;
+      .label {
+        font-size: 3rem;
+        color: $input-text-active;
+        margin-bottom: 2rem;
+        span {
+          color: $input-text-inactive;
+        }
+      }
+    }
+  }
+}

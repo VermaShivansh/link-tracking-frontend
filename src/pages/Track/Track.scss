@@ -1,7 +1,13 @@
-@import '../Generate.scss';
+@import "../Generate.scss";
 
-.track{
-.heading{
+.track {
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .heading {
     color: white;
     width: 100%;
     display: flex;
@@ -11,9 +17,8 @@
     padding-bottom: 20px;
     font-size: 3rem;
     animation: flicker 1.5s infinite alternate;
-}
-    .arrow{
-        transform: scale(2.85) translate(2px,1.3px);
-       }
-    
+  }
+  .arrow {
+    transform: scale(2.85) translate(2px, 1.3px);
+  }
 }
