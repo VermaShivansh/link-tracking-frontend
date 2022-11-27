@@ -1,0 +1,19 @@
+@import '../Generate.scss';
+
+.track{
+.heading{
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 3rem;
+    animation: flicker 1.5s infinite alternate;
+}
+    .arrow{
+        transform: scale(2.85) translate(2px,1.3px);
+       }
+    
+}

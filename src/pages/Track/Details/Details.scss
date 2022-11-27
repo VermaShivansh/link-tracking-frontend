@@ -1,0 +1,19 @@
+@import '../../Generate.scss';
+
+.details{
+    .webflow-style-input{
+        .copy{
+        background:transparent;
+        width: 20px;
+        transform: translate(-25px,4px) scale(2.5);
+        &.copied{
+            transition: 100ms;
+            background: transparent;
+            fill:rgb(8, 212, 8);
+        }
+        }
+       .arrow{
+        transform: scale(2.85) translate(2px,1.3px);
+       }
+    }
+}
