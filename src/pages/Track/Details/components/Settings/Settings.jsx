@@ -15,11 +15,9 @@ const Settings = ({ data, setData, getAllInfo }) => {
 
   const onSave = async () => {
     console.log(data.settings);
-    const res = await axios.put(
-      `${ENVS.BACKEND_URL}/settings/${id}`,
-      data.settings
-    );
+    const res = await axios.put(`${ENVS.BACKEND_URL}/settings/${id}`, data);
     const resData = res.data.data;
+    console.log(resData);
     await getAllInfo();
     alert("Saved successfully");
   };
@@ -51,6 +49,26 @@ const Settings = ({ data, setData, getAllInfo }) => {
       <div className="heading">Settings</div>
 
       <div className="options">
+        <div className="option">
+          <div className="subheading">Target Url</div>
+          <div className="label">Customize your target URL</div>
+          <div
+            class={`webflow-style-input removeRGB ${
+              !data.target_url ? "disabled" : ""
+            }`}
+          >
+            <input
+              type="text"
+              value={data?.target_url}
+              onChange={(e) => {
+                setData((prev) => ({
+                  ...prev,
+                  target_url: e.target.value,
+                }));
+              }}
+            />
+          </div>
+        </div>
         <div className="option">
           <div className="subheading">
             Accessible Ips
